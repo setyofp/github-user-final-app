@@ -72,6 +72,7 @@ class FavoriteActivity : AppCompatActivity(), ViewState<List<GithubUser>> {
     override fun onFailed(message: String?) {
         if (message == null) {
             favoriteBinding.apply {
+                favorite.visibility = invisible
                 favoriteLoadingCircle.visibility = invisible
                 favoriteEmpty.text = getString(R.string.favorite_empty)
             }
