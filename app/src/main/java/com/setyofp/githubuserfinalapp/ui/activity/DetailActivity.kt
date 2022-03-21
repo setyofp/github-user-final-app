@@ -77,6 +77,8 @@ class DetailActivity : AppCompatActivity(), ViewState<GithubUser?> {
                 .apply(RequestOptions.circleCropTransform())
                 .into(avatarDetail)
 
+
+
             followers.visibility = View.VISIBLE
             repository.visibility = View.VISIBLE
             following.visibility = View.VISIBLE
