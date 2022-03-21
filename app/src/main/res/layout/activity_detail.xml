@@ -195,4 +195,14 @@
         app:layout_constraintBottom_toTopOf="@+id/followersNumber"
         app:layout_constraintEnd_toEndOf="@+id/followersNumber"
         app:layout_constraintStart_toStartOf="@+id/followersNumber" />
+
+    <ProgressBar
+        android:id="@+id/detail_loading_circle"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -50,6 +50,16 @@ class DetailActivity : AppCompatActivity(), ViewState<GithubUser?> {
                     R.string.following
                 )[position])
             }.attach()
+
+            followers.visibility = View.INVISIBLE
+            repository.visibility = View.INVISIBLE
+            following.visibility = View.INVISIBLE
+            locationLogo.visibility = View.INVISIBLE
+            companyLogo.visibility = View.INVISIBLE
+            tabs.visibility = View.INVISIBLE
+            viewPager.visibility = View.INVISIBLE
+            favorite.visibility = View.INVISIBLE
+            detailLoadingCircle.visibility = View.VISIBLE
         }
     }
 
@@ -67,7 +77,15 @@ class DetailActivity : AppCompatActivity(), ViewState<GithubUser?> {
                 .apply(RequestOptions.circleCropTransform())
                 .into(avatarDetail)
 
+            followers.visibility = View.VISIBLE
+            repository.visibility = View.VISIBLE
+            following.visibility = View.VISIBLE
+            locationLogo.visibility = View.VISIBLE
+            companyLogo.visibility = View.VISIBLE
+            tabs.visibility = View.VISIBLE
+            viewPager.visibility = View.VISIBLE
             favorite.visibility = View.VISIBLE
+            detailLoadingCircle.visibility = View.INVISIBLE
 
             if (data?.isFavorite!!)
                 favorite.setImageDrawable(ResourcesCompat.getDrawable(resources, R.drawable.ic_baseline_favorite_24, null))
